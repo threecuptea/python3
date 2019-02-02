@@ -51,7 +51,7 @@ def minimum_steps(obst, start, end):
             if (next == end):
                 return level + 1 #step = curr level + 1,
             # Optimize
-            if (next != curr and not visited[next[0]][next[1]]):
+            if (not visited[next[0]][next[1]]):
                 q.append((next, level+1))
                 visited[next[0]][next[1]] = True
 
